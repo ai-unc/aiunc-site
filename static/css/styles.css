@@ -1,0 +1,100 @@
+:root{
+  --blue:#7BAFD4;
+  --base:#004773;
+  --offwhite:#F7F9FA;
+
+  --text-dark:#004773;
+  --text-light:#F7F9FA;
+  --text-yellow:#FFD100;
+  --muted:rgba(0,71,115,.7);
+}
+
+/* GLOBAL RESET */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: white;
+  color: #F7F9FA;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+/* NAV BAR */
+
+.nav{
+  background:var(--offwhite);
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.nav-inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:12px 20px;
+  display:grid;
+  grid-template-columns: auto 1fr auto;
+  align-items:center;
+}
+
+/* LEFT: LOGO */
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  color:var(--text-dark);
+  text-decoration:none;
+}
+
+.logo img{
+  height:28px;
+  width:auto;
+}
+
+/* CENTER: LINKS */
+
+.nav-center{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.nav-center a{
+  color:var(--text-dark);
+  text-decoration:none;
+}
+
+.nav-center a:hover{
+  text-decoration:underline;
+}
+
+/* RIGHT: JOIN BUTTON */
+
+.nav-right{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.join-btn{
+  padding:8px 16px;
+  border-radius:999px;
+  background:var(--blue);
+  color:var(--text-dark);
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* MAIN CONTENT */
+
+.container{
+  max-width:780px;
+  margin:0 auto;
+  padding:40px 18px 64px;
+  color: #004773;
+}

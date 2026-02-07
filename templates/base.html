@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title if title else "AI@UNC" }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/ailogo.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+  <header class="nav">
+  <div class="nav-inner">
+
+    <!-- LEFT -->
+    <a class="logo" href="/">
+      <img src="{{ url_for('static', filename='img/logo.png') }}" alt="AI@UNC logo">
+      AI@UNC
+    </a>
+
+    <!-- CENTER -->
+    <nav class="nav-center">
+      <a href="/projects">Projects</a>
+      <a href="/programs">Programs</a>
+      <a href="/events">Events</a>
+      <a href="/contact">Contact</a>
+    </nav>
+
+    <!-- RIGHT -->
+    <div class="nav-right">
+      <a class="join-btn" href="/join">Join</a>
+    </div>
+
+  </div>
+</header>
+
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>AI@UNC</div>
+    </div>
+  </footer>
+</body>
+</html>
