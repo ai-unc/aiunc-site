@@ -4,21 +4,23 @@
   <meta charset="utf-8">
   <title>{{ title if title else "AI@UNC" }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/ailogo.png') }}">
+  <link rel="icon" href="{{ url_for('static', filename='img/ailogo.png') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header class="nav">
-  <div class="nav-inner">
 
-    <!-- LEFT -->
+<header class="nav overlay">
+  <div class="nav-inner">
     <a class="logo" href="/">
-      <img src="{{ url_for('static', filename='img/logo.png') }}" alt="AI@UNC logo">
+      <img src="{{ url_for('static', filename='img/logo.png') }}">
       AI@UNC
     </a>
 
-    <!-- CENTER -->
     <nav class="nav-center">
       <a href="/projects">Projects</a>
       <a href="/programs">Programs</a>
@@ -26,23 +28,53 @@
       <a href="/contact">Contact</a>
     </nav>
 
-    <!-- RIGHT -->
-    <div class="nav-right">
-      <a class="join-btn" href="/join">Join</a>
-    </div>
-
+    <a class="join-btn" href="/join">Join</a>
   </div>
 </header>
 
+{% block content %}{% endblock %}
 
-  <main class="container">
-    {% block content %}{% endblock %}
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>AI@UNC</div>
-    </div>
-  </footer>
 </body>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-left">
+      <div class="footer-brand">AI@UNC</div>
+      <div class="footer-email">ai.unc@gmail.com</div>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/ai_unc/" aria-label="Instagram">Instagram</a>
+        <a href="https://discord.gg/pywfbxPkXd" aria-label="Discord">Discord</a>
+        <a href="https://www.linkedin.com/company/ai-unc/posts/?feedView=all" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <div class="footer-heading">About</div>
+        <a href="/projects">Projects</a>
+        <a href="/programs">Programs</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Community</div>
+        <a href="/events">Events</a>
+        <a href="/join">Join</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Contact</div>
+        <a href="/contact">Contact Us</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © {{ 2026 }} Artificial Intelligence Club @ UNC · University of North Carolina at Chapel Hill
+  </div>
+</footer>
+
+
 </html>

@@ -1,6 +1,122 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div style="font-weight: bold;">Thank you for visiting our website!<br><br> We are currently in the process of revamping our digital infrastructure, please check back on Monday (2/9) to see our new website!</div>
+<section class="hero hero-vibrant hero-long">
+
+  {#{% include "rivers.html" %}#}
+
+  <div class="hero-inner">
+    <h1>
+      ARTIFICIAL INTELLIGENCE
+      <span class="hero-subline">AT UNC</span>
+    </h1>
+  </div>
+
+<section class="flow flow-single">
+  <div class="flow-card">
+
+    <h2>
+      Bringing <strong>AI and machine learning</strong> to <strong>Carolina</strong> through <strong>application</strong> and <strong>research</strong>
+    </h2>
+
+    <p>
+      <span class="brand">
+        <span class="brand-blue">AI</span>@<span class="brand-blue">UNC</span>
+      </span>
+      is Carolina's premier student organization focused on artificial intelligence and machine learning. Our organization partners our engineers with faculty, research labs, and each other to collaborate on meaningful
+      <span class="highlight">technical projects</span> and build impactful tools that are deployed. Additionally, we offer a
+      <span class="highlight">Competition Team</span> representing our organization to participate at the highest levels of competitive AI/ML.
+    </p>
+
+    <p>
+      Students are given support from our experienced Technical Chairs throughout the year, who help oversee projects, guide our students, anticipate challenges, and ensure productivity. Students then have the opportunity to present their work to faculty, industry, and their peers at our end of year
+      <span class="highlight">
+        <span class="brand-blue">AI</span>@<span class="brand-blue">UNC</span> I/O event
+      </span>.
+    </p>
+
+    <p>
+      We believe in preparing our engineers with an industry level technical skillset and collaborative experience, while also cultivating a forward thinking, ethical, and innovative engineering philosophy. Hence, we offer our
+      <span class="highlight">Literature Division</span> as a rigorous examination of artificial intelligence as a civilizational and cultural force rather than merely a technology. We facilitate discussions that prioritize depth, disagreement, and intellectual risk to examine AI’s cultural and philosophical implications on society.
+    </p>
+
+  </div>
+</section>
+
+
+
+  <!-- STUDENT LED PROJECTS -->
+
+<section class="split-section">
+  <div class="split-inner fade-in">
+
+    <div class="split-text">
+      <h2>Student-Led Projects</h2>
+      <p>
+        Project teams provide an exciting opportunity to immerse yourself
+        in the dynamic field of AI. Work on real technical applications
+        in a collaborative setting while receiving structured guidance
+        from experienced Technical Chairs.
+      </p>
+      <p>
+        Students build impactful tools, develop strong engineering habits,
+        and present their work at the end-of-year
+        <span class="text-blue">AI@UNC I/O event</span>.
+      </p>
+    </div>
+
+    <div class="split-image">
+      <img src="{{ url_for('static', filename='img/lecture.jpg') }}" alt="AI@UNC lecture hall">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- AI@UNC I/O -->
+
+<section class="split-section">
+  <div class="split-inner reverse fade-in">
+
+    <div class="split-text">
+      <h2>
+        <span class="text-blue">AI@UNC I/O</span>
+      </h2>
+      <p>
+        As the culminating end-of-year conference for our organization, <span class="text-blue">AI@UNC I/O</span>
+        provides our engineers with a platform to present their technical projects to faculty,
+        industry recruiters, engineers, students, and their families.
+      </p>
+      <p>
+        Each team presents a formal research poster inside the venue,
+        interspersed with spotlight stage presentations during designated
+        time slots. The event reflects the depth and seriousness of the
+        work produced throughout the year.
+      </p>
+    </div>
+
+    <div class="split-image">
+      <img src="{{ url_for('static', filename='img/io.jpg') }}" alt="AI@UNC I/O Event">
+    </div>
+
+  </div>
+</section>
+
+</section>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+faders.forEach(el => observer.observe(el));
+</script>
+
 
 {% endblock %}

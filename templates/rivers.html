@@ -1,0 +1,65 @@
+<div class="line-rivers">
+
+  <!-- LEFT EDGE → TOP EDGE (true edge to edge) -->
+  <svg class="river" viewBox="0 0 1600 2000" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="fade-lt" x1="0%" y1="60%" x2="70%" y2="0%">
+        <stop offset="0%" stop-color="#56a0d3" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#56a0d3" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+
+    <g class="flow-lines" stroke="url(#fade-lt)">
+      <path d="
+        M0,1200
+        C400,1100 800,800 1100,400
+        C1300,200 1450,100 1600,0
+      "/>
+      <path d="
+        M0,1250
+        C450,1150 850,850 1150,450
+        C1350,250 1500,120 1600,0
+      "/>
+      <path d="
+        M0,1150
+        C350,1050 750,750 1050,350
+        C1250,150 1400,80 1550,0
+      "/>
+    </g>
+  </svg>
+
+
+  <!-- BOTTOM RIGHT MEANDER → TOP RIGHT -->
+  <svg class="river" viewBox="0 0 1600 2000" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="fade-br" x1="100%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#56a0d3" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#56a0d3" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+
+    <g class="flow-lines" stroke="url(#fade-br)">
+      <path d="
+        M1600,2000
+        C1450,1700 1300,1500 1350,1300
+        C1400,1100 1550,1000 1500,800
+        C1450,600 1600,400 1600,0
+      "/>
+
+      <path d="
+        M1600,2000
+        C1500,1750 1350,1550 1400,1350
+        C1450,1150 1580,1050 1530,850
+        C1480,650 1600,450 1600,0
+      "/>
+
+      <path d="
+        M1600,2000
+        C1420,1650 1250,1450 1300,1250
+        C1350,1050 1500,950 1450,750
+        C1400,550 1600,350 1600,0
+      "/>
+    </g>
+  </svg>
+
+</div>
