@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="projects-hero">
+  <div class="projects-hero-inner">
+    <h1>Spring 2026 Projects</h1>
+    <p>Technical AI research and applied machine learning initiatives.</p>
+  </div>
+</section>
+
+<section class="projects-grid">
+
+  <!-- PROJECT CARD -->
+  <div class="project-card fade-in">
+    <h3>Benchmarking Project</h3>
+    <p class="lead">Lead: Obed Pasha</p>
+    <p>Automatically flagging corrupt or mis-entered data across databases. Extension of last year’s work.</p>
+    <p class="meta">Python or R required</p>
+  </div>
+
+  <div class="project-card fade-in">
+    <h3>Deep Learning for N-of-1 Studies</h3>
+    <p class="lead">Lead: Dr. Bazzano</p>
+    <p>Aggregating N-of-1 experimental designs using machine learning and deep learning to model individualized treatment effects.</p>
+    <p class="meta">Python + ML familiarity</p>
+  </div>
+
+  <div class="project-card fade-in">
+    <h3>Public-Facing AI Agent for Public Health</h3>
+    <p class="lead">Lead: Dr. Bazzano</p>
+    <p>Building an AI agent translating a scoping review of AI in public health into an interactive, accessible system.</p>
+    <p class="meta">Python + ML familiarity</p>
+  </div>
+
+  <div class="project-card fade-in">
+    <h3>AI Support Tool for Women’s Well-Being</h3>
+    <p class="lead">Lead: Dr. Bazzano</p>
+    <p>Designing a privacy-conscious AI prototype supporting women balancing work, caregiving, and health.</p>
+    <p class="meta">Python + ML familiarity</p>
+  </div>
+
+  <div class="project-card fade-in">
+    <h3>Health Misinformation Detection</h3>
+    <p class="lead">Lead: Dr. Bazzano</p>
+    <p>Developing a multimodal misinformation detection system focused on maternal and child health.</p>
+    <p class="meta">Python + ML familiarity</p>
+  </div>
+
+  <div class="project-card fade-in">
+    <h3>Operationalizing Neoliberalism (NLP)</h3>
+    <p class="lead">Lead: Dr. Sola</p>
+    <p>Using NLP to classify how social scientists operationalize neoliberalism across published research.</p>
+    <p class="meta">Python + NLP (R helpful)</p>
+  </div>
+
+  <div class="project-card fade-in">
+    <h3>Machine Learning for Quantum Error Correction</h3>
+    <p class="lead">Lead: Arsh Noman</p>
+    <p>Using evolutionary algorithms and reinforcement learning to discover QEC codes and reimplement research-grade systems.</p>
+    <p class="meta">Python + Intro ML</p>
+  </div>
+
+  <div class="project-card fade-in">
+    <h3>Registron 2.0</h3>
+    <p class="lead">Lead: Sam Bisaria</p>
+    <p>AI-powered course recommendations, autonomous registration tools, and UI improvements integrating ConnectCarolina data.</p>
+    <p class="meta">JS + Python backend + LLM systems</p>
+  </div>
+
+  <div class="project-card fade-in">
+    <h3>Sports Video Understanding and Analysis Tool</h3>
+    <p class="lead">Lead: Rohan Phadke</p>
+    <p>Using video understanding models to caption and analyze sports videos. The end goal is to produce a full-stack application that can provide feedback on an athlete’s form as a virtual coach.</p>
+    <p class="meta">Python backend + Full stack development</p>
+  </div>
+
+
+</section>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-in').forEach(el => {
+  observer.observe(el);
+});
+</script>
+
+
+{% endblock %}

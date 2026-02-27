@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="notfound-wrapper">
+
+<section class="notfound">
+
+  <div class="circuit-bg">
+    <svg viewBox="0 0 1200 800" preserveAspectRatio="none">
+      <g class="circuit-lines">
+        <path d="M0 200 H400 V350 H800 V150 H1200" />
+        <path d="M0 500 H300 V650 H900 V400 H1200" />
+        <path d="M200 0 V250 H600 V100 H1000 V300" />
+        <path d="M100 800 V600 H500 V750 H1100" />
+      </g>
+    </svg>
+  </div>
+
+  <div class="notfound-inner">
+    <h1>404</h1>
+    <p class="nf-sub">Signal lost.</p>
+    <p class="nf-desc">
+      The page you are looking for does not exist yet!<br>
+      We are currently in the process of renovating our digital infrastructure!
+      <br><br>Return to the <a href="/">home node</a>.
+    </p>
+  </div>
+
+</section>
+
+</div>
+{% endblock %}
