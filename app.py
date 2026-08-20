@@ -24,7 +24,7 @@ def contact():
 
 @app.get("/join")
 def join():
-    return render_template("404new.html", title="Join | AI@UNC")
+    return render_template("join.html", title="Join | AI@UNC")
 
 @app.errorhandler(404)
 def not_found(e):

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="join-page">
+
+  <div class="join-hero">
+    <h1>Join</h1>
+    <p>Membership in Carolina's student organization for artificial intelligence.</p>
+  </div>
+
+  <div class="join-body">
+    <div class="flow-card join-card fade-in">
+
+      <h2>
+        Applications open
+        <span class="text-blue">Monday, August 24, 2026</span>
+      </h2>
+
+      <p>
+        A formal application form will be posted here when membership opens.
+        Until then, this page is a holding notice for students preparing to apply.
+      </p>
+
+      <p>
+        Applications are open to students at the
+        <span class="highlight">University of North Carolina at Chapel Hill</span>.
+        Engineers, researchers, and writers are all welcome. Whether you want to
+        build and deploy tools on a
+        <span class="highlight">technical project team</span>,
+        compete at a high level on the
+        <span class="highlight">Competition Team</span>,
+        or examine AI as a civilizational and cultural force in the
+        <span class="highlight">Literature Division</span>.
+      </p>
+
+      <p>
+        Join the Discord to meet the community, follow announcements, and learn
+        more about our work before the form goes live.
+      </p>
+
+      <div class="join-actions">
+        <a class="join-cta" href="https://discord.gg/pywfbxPkXd">Join the Discord</a>
+        <div class="join-secondary">
+          <a href="/projects">Explore Projects</a>
+          <span class="join-dot">·</span>
+          <a href="/programs">See Programs</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+faders.forEach(el => observer.observe(el));
+</script>
+
+{% endblock %}
