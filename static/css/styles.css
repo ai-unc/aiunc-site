@@ -980,12 +980,33 @@ a:hover{
   margin-bottom:0;
 }
 
+.join-card p a{
+  color:var(--blue);
+  border-bottom:1px solid rgba(123,175,212,0.5);
+  transition:border-color .3s ease;
+}
+
+.join-card p a:visited{
+  color:var(--blue);
+}
+
+.join-card p a:hover{
+  border-bottom:1px solid var(--blue);
+}
+
 .join-actions{
   margin-top:36px;
   display:flex;
   flex-direction:column;
   align-items:center;
   gap:18px;
+}
+
+.join-cta-row{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
 }
 
 .join-cta{
